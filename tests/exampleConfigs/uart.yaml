@@ -1,0 +1,30 @@
+gosthome:
+  name: "test"
+  mac: 22:a8:cb:28:fd:7f
+
+api:
+  port: 6053
+  encryption:
+    key: "e7T+75OX/5F5uRwXGz/ODSrLX/wVpo8hp/YXIyGyzuo="
+
+uart:
+  port: /dev/ttyACM0
+  baud_rate: 115200
+
+button:
+  - platform: uart
+    id: "f"
+    name: up
+    data: "w"
+  - platform: uart
+    name: down
+    data: "s"
+  - platform: uart
+    name: left
+    data: "d"
+  - platform: uart
+    name: right
+    data: "a"
+  - platform: uart
+    name: reset
+    data: "r"

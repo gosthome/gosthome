@@ -1,0 +1,4 @@
+venv
+pyrightconfig.json
+/gosthome
+/dist

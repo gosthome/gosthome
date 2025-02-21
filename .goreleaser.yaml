@@ -1,0 +1,18 @@
+version: 2
+project_name: gosthome
+builds:
+  - env: [CGO_ENABLED=0]
+    main: ./cmd/gosthome
+    goos:
+      - linux
+      # - windows
+      # - darwin
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -X 'github.com/gosthome/gosthome/core.version={{ .Version }}'
+      - -X 'github.com/gosthome/gosthome/core.commit={{ .ShortCommit }}'
+
+archives:
+  - format: binary
